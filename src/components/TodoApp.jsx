@@ -17,8 +17,7 @@ function TodoApp() {
       <ul className={styles.nodeList}>
         {notas.map((nota) => (
           <li className={styles.noteItem} key={nota.id}>
-            <h2>{nota.text}</h2>
-            <p>{nota.description}</p>
+            {nota.text} {nota.completed ? "❎" : "🟥"}
           </li>
         ))}
       </ul>

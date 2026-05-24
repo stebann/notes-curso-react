@@ -3,19 +3,16 @@
     {
       "id": "1",
       "text": "a title",
-      "description": "a description",
       "completed": false
     },
     {
       "id": "2",
       "text": "another title",
-      "description": "another description",
-      "completed": false
+      "completed": true
     },
     {
       "id": "3",
       "text": "a third title",
-      "description": "a third description",
       "completed": false
     }
   ]
