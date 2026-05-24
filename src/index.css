@@ -8,9 +8,8 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #222;
   color: #fff;
-  display: grid;
-  place-items: center;
-  min-height: 100dvh;
+  height: 100dvh;
+  padding: 0 15px;
 }
 
 button {
@@ -19,4 +18,11 @@ button {
   margin-right: 10px;
   border-radius: 16px;
   cursor: pointer;
+}
+
+.containerTodoApp {
+  width: 100%;
+  max-width: 900px;
+  margin: 100px auto 0 auto;
+  border-radius: 8px;
 }

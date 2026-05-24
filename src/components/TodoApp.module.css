@@ -1,11 +1,18 @@
 .titulo {
   color: orange;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .nodeList {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.noteItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }

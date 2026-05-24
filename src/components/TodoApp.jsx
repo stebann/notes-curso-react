@@ -1,35 +1,23 @@
-import { useState } from "react";
-import styles from "./TodoApp.css";
+import { useEffect, useState } from "react";
+import styles from "./TodoApp.module.css";
 
 function TodoApp() {
-  const notasList = [
-    {
-      id: crypto.randomUUID(),
-      title: "Nota 1",
-      content: "Contenido de la nota 1",
-    },
-    {
-      id: crypto.randomUUID(),
-      title: "Nota 2",
-      content: "Contenido de la nota 2",
-    },
-    {
-      id: crypto.randomUUID(),
-      title: "Nota 3",
-      content: "Contenido de la nota 3",
-    },
-  ];
+  const [notas, setNotas] = useState([]);
 
-  const [notas, setNotas] = useState(notasList);
+  useEffect(() => {
+    fetch("http://localhost:3000/notas")
+      .then((response) => response.json())
+      .then((notasList) => setNotas(notasList));
+  }, []);
 
   return (
     <>
       <h1 className={styles.titulo}>Notas</h1>
       <ul className={styles.nodeList}>
         {notas.map((nota) => (
-          <li key={nota.id}>
-            <h2>{nota.title}</h2>
-            <p>{nota.content}</p>
+          <li className={styles.noteItem} key={nota.id}>
+            <h2>{nota.text}</h2>
+            <p>{nota.description}</p>
           </li>
         ))}
       </ul>
