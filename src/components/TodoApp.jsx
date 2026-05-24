@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { API_BASE_URL, NOTAS_API } from "../constants";
 import styles from "./TodoApp.module.css";
 
 function TodoApp() {
   const [notas, setNotas] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/notas")
+    fetch(`${API_BASE_URL}/${NOTAS_API.GET_ALL}`)
       .then((response) => response.json())
       .then((notasList) => setNotas(notasList));
   }, []);
