@@ -1,0 +1,11 @@
+.titulo {
+  color: orange;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.nodeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
